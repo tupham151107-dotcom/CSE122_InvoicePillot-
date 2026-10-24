@@ -1,0 +1,236 @@
+.role-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 8px 0 22px;
+}
+
+.role-heading h1 {
+  font: 750 25px var(--font-heading);
+  margin: 0 0 6px;
+}
+
+.role-heading p, 
+.role-panel-heading p {
+  font-size: 11px;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.role-heading .eyebrow {
+  margin-bottom: 7px;
+}
+
+.role-heading .button-primary {
+  width: auto;
+  margin: 0;
+}
+
+.role-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.role-card, 
+.role-panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.role-card {
+  display: grid;
+  gap: 8px;
+  padding: 17px;
+}
+
+.role-card small, 
+.role-card span {
+  font-size: 10px;
+  color: var(--color-muted);
+}
+
+.role-card strong {
+  font: 750 22px var(--font-heading);
+  color: var(--color-navy);
+}
+
+.role-card .positive {
+  color: var(--color-success);
+}
+
+.role-panel {
+  overflow: hidden;
+}
+
+.role-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.role-panel-heading h2 {
+  font: 700 14px var(--font-heading);
+  margin: 0 0 5px;
+}
+
+.role-inline-link {
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.role-search {
+  width: min(260px, 45%);
+  height: 37px;
+  padding: 0 11px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+}
+
+.table-scroll {
+  overflow: auto;
+}
+
+.role-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+.role-table th, 
+.role-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #edf1f6;
+  text-align: left;
+  font-size: 10px;
+}
+
+.role-table th {
+  background: #fafbfd;
+  color: #8290a4;
+  font-size: 8px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.role-table td {
+  color: #536780;
+}
+
+.role-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.role-table td strong {
+  color: #22405f;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 99px;
+  background: #e6f5ee;
+  color: #188564;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.role-badge.pending {
+  background: #fff2dc;
+  color: #a86d14;
+}
+
+.role-table button {
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: #fff;
+  color: #526984;
+  padding: 6px 9px;
+  font-size: 8px;
+}
+
+.role-message {
+  min-height: 18px;
+  margin-top: 10px;
+  color: var(--color-success);
+  font-size: 10px;
+}
+
+@media (max-width: 720px) {
+  .role-stats {
+    grid-template-columns: 1fr;
+  }
+  .role-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .role-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .role-search {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.accountant-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background: rgba(12, 29, 51, .48);
+  backdrop-filter: blur(3px);
+}
+
+.accountant-modal {
+  width: min(900px, 100%);
+  max-height: min(88vh, 820px);
+  overflow: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(10, 29, 52, .24);
+}
+
+.accountant-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 23px 26px 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accountant-modal-header .eyebrow {
+  margin-bottom: 6px;
+}
+
+.accountant-modal-header h2 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 21px;
+}
+
+.accountant-modal-close {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  color: #60728a;
+  background: #fff;
+  font-size: 22px;
+  line-height: 1;
+}
+
